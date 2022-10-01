@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pong : Minigame
@@ -48,16 +46,6 @@ public class Pong : Minigame
             paddle4.transform.Translate(0, paddleSpeed * Time.deltaTime, 0);
         else if (Input.GetKey(player4Down))
             paddle4.transform.Translate(0, -paddleSpeed * Time.deltaTime, 0);
-    }
-    private void LaunchBall()
-    {
-        int x = Random.Range(0, 2) == 0 ? ballSpeed : -ballSpeed;
-        int y = Random.Range(0, 2) == 0 ? ballSpeed : -ballSpeed;
-        ball.velocity = new Vector2(x, y);
-    }
-    private void Start()
-    {
-        LaunchBall();
     }
     private void Update()
     {
