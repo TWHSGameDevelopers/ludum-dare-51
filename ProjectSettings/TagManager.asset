@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LateralPaddle
-  - VerticalPaddle
+  - Coin
+  - Bill
+  - Paddle
   layers:
   - Default
   - TransparentFX

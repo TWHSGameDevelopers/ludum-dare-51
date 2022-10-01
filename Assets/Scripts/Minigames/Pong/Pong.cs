@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Pong : Minigame
 {
-    public Rigidbody2D ball;
-    public int ballSpeed;
+    public int[] scores = new int[4];
 
     [Header("Paddles")]
     public int paddleSpeed;
@@ -47,8 +46,36 @@ public class Pong : Minigame
         else if (Input.GetKey(player4Down))
             paddle4.transform.Translate(0, -paddleSpeed * Time.deltaTime, 0);
     }
+    private void ClampX(Transform paddle, float min, float max)
+    {
+        float x = paddle.position.x;
+        float y = paddle.position.y;
+
+        paddle.position = new Vector2(Mathf.Clamp(x, min, max), y);
+    }
+    private void ClampY(Transform paddle, float min, float max)
+    {
+        float x = paddle.position.x;
+        float y = paddle.position.y;
+
+        paddle.position = new Vector2(x, Mathf.Clamp(y, min, max));
+    }
     private void Update()
     {
         Controls();
+
+        ClampX(paddle1.transform, -6.4f, 6.4f);
+        ClampX(paddle2.transform, -6.4f, 6.4f);
+        ClampY(paddle3.transform, -3.2f, 3.2f);
+        ClampY(paddle4.transform, -3.2f, 3.2f);
+    }
+    public void Score(int playerIndex, int amount)
+    {
+        int prev = scores[playerIndex];
+        int next = prev + amount;
+
+        if (next < 1) next = 0;
+
+        scores[playerIndex] = next;
     }
 }
