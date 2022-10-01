@@ -27,6 +27,7 @@ public class Controls : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject floor;
     public Hit hitScript;
+    public Animator anim;
 
     private void Awake()
     {
@@ -109,6 +110,7 @@ public class Controls : MonoBehaviour
     public void Attack()
     {
         //Debug.Log("attack mwahaha");
+        anim.SetTrigger("attack");
     }
     
     public Vector2 ClampVelocity(float x, float y)

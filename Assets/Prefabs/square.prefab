@@ -107,6 +107,7 @@ MonoBehaviour:
   canInput: 1
   speed: 30
   maxSpeed: 10
+  faceRight: 1
   canJump: 1
   jumpSize: 500
   maxJumps: 1
@@ -117,6 +118,7 @@ MonoBehaviour:
   rb: {fileID: 8253065335075452894}
   floor: {fileID: 0}
   hitScript: {fileID: 3940711523681323950}
+  anim: {fileID: 1302386764}
 --- !u!50 &8253065335075452894
 Rigidbody2D:
   serializedVersion: 4
@@ -179,7 +181,7 @@ MonoBehaviour:
   score: 0
   coinPts: 1
   billPts: 3
-  lavaDiePts: 1
+  lavaDiePts: 0
   lavaKillPts: 1
   punchForce: {x: 300, y: 100}
   controls: {fileID: 7933210972270576751}
@@ -222,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1927320594684574147
 Transform:
   m_ObjectHideFlags: 0

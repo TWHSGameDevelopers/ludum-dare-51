@@ -9,6 +9,7 @@ public class Hit : MonoBehaviour
     public int billPts = 3;
     public int lavaDiePts = 0;//the number of points you lose for dieing in lava
     public int lavaKillPts = 1;
+    public int projPts = 1; //pts you lose from being hit wiht a projectile
     public Vector2 punchForce;
     public Controls controls;
     public Controls killer;
