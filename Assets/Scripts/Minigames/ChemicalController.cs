@@ -26,6 +26,7 @@ public class ChemicalController : MonoBehaviour
         {
             if (ChemicalSelect(d))//if itsnt toxic
             {
+                print("Player: " + p + " Direction: " + d + " Substance: " + mix.GetChemicals()[d]);
                 scores[p] += waterPts;
                 ui.UpdateUIChem(scores, dead);
             }
@@ -99,7 +100,7 @@ public class ChemicalController : MonoBehaviour
 
     public bool ChemicalSelect(int d)//direction
     {
-        if (mix.chemicals[d].isToxic)
+        if (mix.GetChemicals()[d].isToxic)
             return false;
         return true;
     }

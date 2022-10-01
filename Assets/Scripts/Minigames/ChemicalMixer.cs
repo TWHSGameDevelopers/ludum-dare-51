@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChemicalMixer : MonoBehaviour
 {
-    public Chemical[] chemicals;
+    private Chemical[] chemicals;
     public Vector2[] startLocs;
     
 
@@ -13,11 +13,25 @@ public class ChemicalMixer : MonoBehaviour
         StartRound();
     }
 
+    public Chemical[] GetChemicals()
+    {
+        return chemicals;
+    }
+
     public void StartRound()
     {
         SaveStartLocations();
-        chemicals = ShuffleChemicals();
+        ShuffleChemicals();
         PlaceChemicals();
+    }
+
+    public void ShuffleChemicals()
+    {
+        Chemical[] shuffled = GenerateShuffledChemicals();
+        for (int i = 0; i < chemicals.Length; i++)
+        {
+            chemicals[i] = shuffled[i];
+        }
     }
 
     public void PlaceChemicals()
@@ -35,7 +49,7 @@ public class ChemicalMixer : MonoBehaviour
         }
     }
 
-    public Chemical[] ShuffleChemicals()
+    public Chemical[] GenerateShuffledChemicals()
     {
         Chemical[] assigned = new Chemical[chemicals.Length];
         for(int i=0; i<chemicals.Length;i++)
@@ -54,7 +68,7 @@ public class ChemicalMixer : MonoBehaviour
 
     public int RandomDirection(int[] rands)
     {
-        int select = Mathf.FloorToInt(Random.value * (5 - Mathf.Epsilon));
+        int select = Mathf.FloorToInt(Random.value * (4 - Mathf.Epsilon));
         int d = rands[select];
         if (d!=-1)
             return d;
@@ -87,11 +101,11 @@ public class ChemicalMixer : MonoBehaviour
 
     public void SaveStartLocations()
     {
-        int i = 0;
-        foreach (Chemical c in chemicals)
+        Chemical[] array = GetChemicals();
+        for (int i = 0; i < array.Length; i++)
         {
-            startLocs[i] = c.transform.position;
-            i++;
+            Chemical c = new Chemical(array[i].direction,array[i].isToxic);
+            startLocs[i] = c.gameObject.transform.position;
         }
     }
 }
