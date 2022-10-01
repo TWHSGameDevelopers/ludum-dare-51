@@ -19,6 +19,7 @@ public class Controls : MonoBehaviour
 
     public Rigidbody2D rb;
     public GameObject floor;
+    public Hit hitScript;
 
     private void Awake()
     {
