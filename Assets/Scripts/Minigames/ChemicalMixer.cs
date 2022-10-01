@@ -42,16 +42,23 @@ public class ChemicalMixer : MonoBehaviour
         {
             assigned[i] = chemicals[i];
         }
-        for(int i=0; i< chemicals.Length;i++)
+        int[] rands = { 0, 1, 2, 3 };
+        for (int i=0; i< chemicals.Length;i++)
         {
-            assigned[i].direction=RandomDirection();
+            int d = RandomDirection(rands);
+            rands[d] = -1;
+            assigned[i].direction = NameDirection(d);
         }
         return assigned;
     }
 
-    public string RandomDirection()
+    public int RandomDirection(int[] rands)
     {
-        return NameDirection(Mathf.FloorToInt(Random.value * (4 - Mathf.Epsilon)));
+        int select = Mathf.FloorToInt(Random.value * (5 - Mathf.Epsilon));
+        int d = rands[select];
+        if (d!=-1)
+            return d;
+        return RandomDirection(rands);
     }
 
     public string NameDirection(int i)

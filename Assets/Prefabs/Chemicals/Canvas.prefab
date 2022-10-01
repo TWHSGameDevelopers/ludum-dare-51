@@ -850,6 +850,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 2285223720947094920}
+    - target: {fileID: 7565524951018819330, guid: d9fe659ab79364f31b82bdf3cfe03bd8, type: 3}
+      propertyPath: mix
+      value: 
+      objectReference: {fileID: 7296664298296348007}
     - target: {fileID: 7565524951018819331, guid: d9fe659ab79364f31b82bdf3cfe03bd8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

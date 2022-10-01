@@ -99,7 +99,8 @@ public class ChemicalController : MonoBehaviour
 
     public bool ChemicalSelect(int d)//direction
     {
-        print("direction" + d);
-        return !mix.chemicals[d].isToxic;
+        if (mix.chemicals[d].isToxic)
+            return false;
+        return true;
     }
 }
