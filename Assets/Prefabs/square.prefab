@@ -101,13 +101,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 0
+  startPos: {x: 0, y: 0}
   canInput: 1
-  speed: 10
-  maxSpeed: 100
-  jumpSize: 100
+  speed: 30
+  maxSpeed: 10
+  canJump: 1
+  jumpSize: 500
   maxJumps: 1
   jumpsUsed: 0
-  groundedDist: 2
+  jumpLag: 0.5
+  groundedDist: 1.5
+  friction: 0
   rb: {fileID: 8253065335075452894}
   floor: {fileID: 0}
   hitScript: {fileID: 3940711523681323950}
@@ -156,7 +160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 2.1, y: 2.1}
   m_EdgeRadius: 0
 --- !u!114 &3940711523681323950
 MonoBehaviour:
@@ -173,5 +177,8 @@ MonoBehaviour:
   score: 0
   coinPts: 1
   billPts: 3
+  lavaDiePts: 0
+  lavaKillPts: 1
   controls: {fileID: 7933210972270576751}
+  killer: {fileID: 0}
   ui: {fileID: 0}
