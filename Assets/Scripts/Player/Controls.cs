@@ -13,6 +13,7 @@ public class Controls : MonoBehaviour
     public bool canInput = true;//can enable or disable player movement
     public float speed = 10.0f;//the speed of horizontal movement
     public float maxSpeed= 100.0f;//the max speed x or y the player can experience
+    public bool faceRight = true;
 
     public bool canJump = true;
     public float jumpSize = 50;
@@ -26,6 +27,7 @@ public class Controls : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject floor;
     public Hit hitScript;
+    public Animator anim;
 
     private void Awake()
     {
@@ -36,10 +38,26 @@ public class Controls : MonoBehaviour
     void Update()
     {
         
-        if(canInput&&playerNum==0)//todo reenable all
+        if(canInput)
         {
             print(playerNum+" jump it: " + Input.GetAxis(jump[playerNum]));
             //print(Input.GetAxis(axisHoriz[playerNum]) + "||" + Input.GetAxis(jump[playerNum]) + "||"+Input.GetAxis(atk[playerNum]));
+            if(Input.GetAxis(axisHoriz[playerNum])>0.1f)
+            {
+                if (!faceRight)
+                {
+                    faceRight = true;
+                    transform.localScale = new Vector2(1,1);
+                }
+            }
+            else if(Input.GetAxis(axisHoriz[playerNum]) < -0.1f)
+            {
+                if (faceRight)
+                {
+                    faceRight = false;
+                    transform.localScale = new Vector2(-1, 1);
+                }
+            }
             float xForce = Input.GetAxis(axisHoriz[playerNum]) * speed;
             float yForce = 0;
             if ((Input.GetAxis(jump[playerNum]) > 0.1f) && (jumpsUsed < maxJumps) && canJump)
@@ -92,6 +110,7 @@ public class Controls : MonoBehaviour
     public void Attack()
     {
         //Debug.Log("attack mwahaha");
+        anim.SetTrigger("attack");
     }
     
     public Vector2 ClampVelocity(float x, float y)
