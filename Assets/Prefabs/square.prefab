@@ -177,7 +177,7 @@ MonoBehaviour:
   score: 0
   coinPts: 1
   billPts: 3
-  lavaDiePts: 0
+  lavaDiePts: 1
   lavaKillPts: 1
   controls: {fileID: 7933210972270576751}
   killer: {fileID: 0}

@@ -7,7 +7,7 @@ public class Hit : MonoBehaviour
     public int score = 0;
     public int coinPts = 1;//point player gets from collecting 1 coin
     public int billPts = 3;
-    public int lavaDiePts = 0;//the number of points you lose for dieing in lava
+    public int lavaDiePts = 1;//the number of points you lose for dieing in lava
     public int lavaKillPts = 1;
     public Controls controls;
     public Controls killer;
@@ -30,6 +30,9 @@ public class Hit : MonoBehaviour
                 if(killer!=null)
                     killer.hitScript.Score(lavaKillPts);
                 Respawn();
+                break;
+            case "Bullet":
+                Score(-1*lavaDiePts);
                 break;
             default:
                 Debug.LogError("Unknown trigger "+other.transform.name);
