@@ -3,17 +3,26 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
-    public Minigame[] minigames;
-    public Minigame currentMinigame;
-    public int currentMinigameIndex;
+    private static MinigameManager _instance;
+    public static MinigameManager Instance { get { return _instance; } }
 
+    public Minigame[] minigames;
+    public int currentMinigame;
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+            Destroy(this.gameObject);
+        else
+            _instance = this;
+    }
     public Minigame GetCurrentMinigame()
     {
-        return minigames[currentMinigameIndex];
+        return minigames[currentMinigame];
     }
     public Minigame GetNextMinigame()
     {
-        int i = currentMinigameIndex;
+        int i = currentMinigame;
 
         if (i == minigames.Length - 1)
             i = 0;
@@ -24,7 +33,7 @@ public class MinigameManager : MonoBehaviour
     }
     public Minigame GetPreviousMinigame()
     {
-        int i = currentMinigameIndex;
+        int i = currentMinigame;
 
         if (i == 0)
             i = minigames.Length - 1;
@@ -40,7 +49,7 @@ public class MinigameManager : MonoBehaviour
     }
     public void SetMinigame(Minigame newMinigame)
     {
-        currentMinigameIndex = Array.IndexOf(minigames, newMinigame);
+        currentMinigame = Array.IndexOf(minigames, newMinigame);
         OnMinigameChange(GetPreviousMinigame(), newMinigame);
     }
     public void NextMinigame()
