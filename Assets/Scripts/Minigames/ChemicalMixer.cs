@@ -71,10 +71,9 @@ public class ChemicalMixer : MonoBehaviour
     {
         int rand = Random.Range(0, 4);
         if (used.Contains(rand))
-            RandomDirection(used);
+            return RandomDirection(used);
         else
             return rand;
-        return -1;
     }
 
     public string NameDirection(int i)
