@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1563089162229001548}
   - component: {fileID: 7175913355460720099}
   - component: {fileID: 7804836285317928006}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 15a35057ee61543a88acbaa04d03b74a, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
