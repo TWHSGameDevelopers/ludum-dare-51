@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minWait: 0.1
   maxWait: 0.5
-  f1: {x: -10, y: 7}
-  f2: {x: 10, y: 8}
+  f1: {x: -100, y: 7}
+  f2: {x: 100, y: 8}
   rb: {fileID: 2292349821995458133}
   shouldFlutter: 1
