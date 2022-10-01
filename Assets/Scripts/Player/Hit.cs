@@ -6,7 +6,7 @@ public class Hit : MonoBehaviour
 {
     public int score = 0;
     public int coinPts = 1;//point player gets from collecting 1 coin
-    public int moneyPts = 3;
+    public int billPts = 3;
     public Controls controls;
     public UIUpdater ui;
 
@@ -18,8 +18,8 @@ public class Hit : MonoBehaviour
                 Score(coinPts);
                 Destroy(other.gameObject);
                 break;
-            case "Money"://money collect gives money points
-                Score(moneyPts);
+            case "Bill"://bill collect gives bill points
+                Score(billPts);
                 Destroy(other.gameObject);
                 break;
             default:

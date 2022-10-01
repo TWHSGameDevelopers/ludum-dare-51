@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 1916391253324078464}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1361749592613503764
 MonoBehaviour:
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b4079183197441ca7f776a5d3ffe21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minWait: 0.1
-  maxWait: 0.8
+  minWait: 0.3
+  maxWait: 0.4
   bound1: {x: -10, y: 8.1}
   bound2: {x: 10, y: 8.1}
   coin: {fileID: 8414158218015404659}
@@ -165,3 +165,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6835331905584273507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414158218015404659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3e56cec3a684f43b57b529d47236ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWait: 0.1
+  maxWait: 0.5
+  f1: {x: 0, y: 0}
+  f2: {x: 0, y: 0}
+  rb: {fileID: 3508279913699337803}
+  shouldFlutter: 0

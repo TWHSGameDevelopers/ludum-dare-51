@@ -141,7 +141,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2393125324306865904}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f6f642b0791674bfe92d01c64e553025, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -172,6 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   coinPts: 1
-  moneyPts: 3
+  billPts: 3
   controls: {fileID: 7933210972270576751}
   ui: {fileID: 0}
