@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ChemicalMixer : MonoBehaviour
 {
-    private Chemical[] chemicals;
+    public Chemical[] chemicals;
     public Vector2[] startLocs;
     
 
@@ -51,33 +50,36 @@ public class ChemicalMixer : MonoBehaviour
 
     public Chemical[] GenerateShuffledChemicals()
     {
-        Chemical[] assigned = new Chemical[chemicals.Length];
-        for(int i=0; i<chemicals.Length;i++)
+        List<int> used = new List<int>();
+        Chemical[] assigned = chemicals;
+        int[] rands = new int[assigned.Length];
+
+        for (int i = 0; i < rands.Length; i++)
         {
-            assigned[i] = chemicals[i];
+            rands[i] = RandomDirection(used);
+            used.Add(rands[i]);
         }
-        int[] rands = { 0, 1, 2, 3 };
-        for (int i=0; i< chemicals.Length;i++)
+        for (int i = 0; i < rands.Length; i++)
         {
-            int d = RandomDirection(rands);
-            rands[d] = -1;
-            assigned[i].direction = NameDirection(d);
+            assigned[i].direction = NameDirection(rands[i]);
         }
+
         return assigned;
     }
 
-    public int RandomDirection(int[] rands)
+    public int RandomDirection(List<int> used)
     {
-        int select = Mathf.FloorToInt(Random.value * (4 - Mathf.Epsilon));
-        int d = rands[select];
-        if (d!=-1)
-            return d;
-        return RandomDirection(rands);
+        int rand = Random.Range(0, 4);
+        if (used.Contains(rand))
+            RandomDirection(used);
+        else
+            return rand;
+        return -1;
     }
 
     public string NameDirection(int i)
     {
-        string d="error in your face";
+        string d = "error in your face";
         switch (i)
         {
             case 0:
@@ -93,7 +95,7 @@ public class ChemicalMixer : MonoBehaviour
                 d = "left";
                 break;
             default:
-                Debug.LogError("not enought directions: " + i);
+                Debug.LogError($"not enough directions: {i}");
                 break;
         }
         return d;
@@ -101,11 +103,7 @@ public class ChemicalMixer : MonoBehaviour
 
     public void SaveStartLocations()
     {
-        Chemical[] array = GetChemicals();
-        for (int i = 0; i < array.Length; i++)
-        {
-            Chemical c = new Chemical(array[i].direction,array[i].isToxic);
-            startLocs[i] = c.gameObject.transform.position;
-        }
+        for (int i = 0; i < chemicals.Length; i++)
+            startLocs[i] = chemicals[i].gameObject.transform.position;
     }
 }
