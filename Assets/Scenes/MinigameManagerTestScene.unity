@@ -710,8 +710,7 @@ MonoBehaviour:
   - {fileID: 1243929957}
   - {fileID: 1210985848}
   - {fileID: 217287232}
-  currentMinigame: {fileID: 0}
-  currentMinigameIndex: 0
+  currentMinigame: 0
 --- !u!4 &1102627291
 Transform:
   m_ObjectHideFlags: 0
