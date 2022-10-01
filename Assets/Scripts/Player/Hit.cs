@@ -33,6 +33,7 @@ public class Hit : MonoBehaviour
                 Respawn();
                 break;
             case "Punch":
+                killer =other.GetComponentInParent<Controls>();
                 controls.rb.AddForce(punchForce);
                 break;
             default:
