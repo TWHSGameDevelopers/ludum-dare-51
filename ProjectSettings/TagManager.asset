@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Coin
   - Bill
-  - Paddle
   layers:
   - Default
   - TransparentFX
