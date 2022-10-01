@@ -10,8 +10,13 @@ public class ChemicalMixer : MonoBehaviour
 
     private void Start()
     {
+        StartRound();
+    }
+
+    public void StartRound()
+    {
         SaveStartLocations();
-        chemicals=ShuffleChemicals();
+        chemicals = ShuffleChemicals();
         PlaceChemicals();
     }
 
