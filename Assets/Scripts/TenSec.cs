@@ -26,6 +26,10 @@ public class TenSec: MonoBehaviour
                 i++;
             }
             ScoreTracker.UpdateScores(s);
+            foreach(int j in ScoreTracker.scores)
+            {
+                print("score "+j);
+            }
         }
         SceneManager.LoadScene(next);
     }
