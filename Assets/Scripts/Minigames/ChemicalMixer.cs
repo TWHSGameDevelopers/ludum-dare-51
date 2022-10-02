@@ -3,12 +3,18 @@ using UnityEngine;
 
 public class ChemicalMixer : MonoBehaviour
 {
-    public Chemical[] chemicals;
+    public Chemical[] fakeChemicals;
+    private Chemical[] chemicals =new Chemical[4];
+
     public Vector2[] startLocs;
     
 
     private void Start()
     {
+        for(int i=0; i<fakeChemicals.Length;i++)
+        {
+            chemicals[i] = fakeChemicals[i];
+        }
         StartRound();
     }
 
@@ -29,6 +35,7 @@ public class ChemicalMixer : MonoBehaviour
         Chemical[] shuffled = GenerateShuffledChemicals();
         for (int i = 0; i < chemicals.Length; i++)
         {
+            print(shuffled[i].gameObject.name);
             chemicals[i] = shuffled[i];
         }
     }
@@ -51,7 +58,11 @@ public class ChemicalMixer : MonoBehaviour
     public Chemical[] GenerateShuffledChemicals()
     {
         List<int> used = new List<int>();
-        Chemical[] assigned = chemicals;
+        Chemical[] assigned = new Chemical[4];
+        for (int i = 0; i < chemicals.Length; i++)
+        {
+            assigned[i] = chemicals[i];
+        }
         int[] rands = new int[assigned.Length];
 
         for (int i = 0; i < rands.Length; i++)

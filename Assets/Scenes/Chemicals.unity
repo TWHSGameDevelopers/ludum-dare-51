@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &559699474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3686964679193481016, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+  m_PrefabInstance: {fileID: 7296664299975335709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1547f27883dc14c2fa9a487a74d9c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891718924
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +228,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &995381469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7527135832821056557, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+  m_PrefabInstance: {fileID: 7296664299975335709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1547f27883dc14c2fa9a487a74d9c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1597585046
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +323,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690453117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7527135832844736879, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+  m_PrefabInstance: {fileID: 7296664299975335709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1547f27883dc14c2fa9a487a74d9c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1695794067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7527135832420545273, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+  m_PrefabInstance: {fileID: 7296664299975335709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1547f27883dc14c2fa9a487a74d9c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2457331956566859092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,6 +500,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: chemicals.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: chemicals.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: chemicals.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: chemicals.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: chemicals.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: fakeChemicals.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: fakeChemicals.Array.data[0]
+      value: 
+      objectReference: {fileID: 559699474}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: fakeChemicals.Array.data[1]
+      value: 
+      objectReference: {fileID: 1690453117}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: fakeChemicals.Array.data[2]
+      value: 
+      objectReference: {fileID: 1695794067}
+    - target: {fileID: 7296664298296348007, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}
+      propertyPath: fakeChemicals.Array.data[3]
+      value: 
+      objectReference: {fileID: 995381469}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e76e663c9a0144b8995ff7fc1d51a95d, type: 3}

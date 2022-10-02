@@ -32,6 +32,7 @@ public class ChemicalController : MonoBehaviour
             }
             else
             {
+                print("Player: " + p + " Direction: " + d + " Substance: " + mix.GetChemicals()[d]);
                 dead[p] = true;
                 scores[p] = 0;//-2 means you died
                 ui.UpdateUIChem(scores, dead);
