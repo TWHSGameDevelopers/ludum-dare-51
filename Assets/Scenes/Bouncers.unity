@@ -188,6 +188,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6225492898907343815}
     - target: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
+      propertyPath: jumpSize
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
       propertyPath: playerNum
       value: 3
       objectReference: {fileID: 0}
@@ -258,6 +262,10 @@ PrefabInstance:
       propertyPath: floor
       value: 
       objectReference: {fileID: 6225492898907343815}
+    - target: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
+      propertyPath: jumpSize
+      value: 1300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
@@ -420,6 +428,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6225492898907343815}
     - target: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
+      propertyPath: jumpSize
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
       propertyPath: playerNum
       value: 1
       objectReference: {fileID: 0}
@@ -490,6 +502,10 @@ PrefabInstance:
       propertyPath: floor
       value: 
       objectReference: {fileID: 6225492898907343815}
+    - target: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
+      propertyPath: jumpSize
+      value: 1300
+      objectReference: {fileID: 0}
     - target: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}
       propertyPath: playerNum
       value: 2

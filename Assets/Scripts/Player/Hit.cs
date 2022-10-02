@@ -35,11 +35,10 @@ public class Hit : MonoBehaviour
                 break;
             case "Punch":
                 killer =other.GetComponentInParent<Controls>();
-                controls.rb.AddForce(punchForce);
-
+                controls.rb.AddForce(punchForce*killer.transform.localScale.x);
+                break;
             case "Bullet":
                 Score(-1*lavaDiePts);
-
                 break;
             default:
                 Debug.LogError("Unknown trigger "+other.transform.name);

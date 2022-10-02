@@ -183,7 +183,8 @@ MonoBehaviour:
   billPts: 3
   lavaDiePts: 1
   lavaKillPts: 1
-  punchForce: {x: 300, y: 100}
+  projPts: 1
+  punchForce: {x: 500, y: 100}
   controls: {fileID: 7933210972270576751}
   killer: {fileID: 0}
   ui: {fileID: 0}
