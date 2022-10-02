@@ -41,7 +41,9 @@ public class Hit : MonoBehaviour
                 Score(-1*lavaDiePts);
                 break;
             default:
-                Debug.LogError("Unknown trigger "+other.transform.name);
+                killer = other.GetComponentInParent<Controls>();
+                controls.rb.AddForce(punchForce * killer.transform.localScale.x);
+                //Debug.LogError("Unknown trigger "+other.transform.name);
                 break;
         }
     }

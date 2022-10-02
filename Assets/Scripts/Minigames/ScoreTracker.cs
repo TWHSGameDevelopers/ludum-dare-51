@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreTracker : MonoBehaviour
+public static class ScoreTracker
 {
-    public int[] scores = { 0, 0, 0, 0 };
-    public Controls[] players;
+    public static int[] scores = { 0, 0, 0, 0 };
+    public static Controls[] players;
 
-    void UpdateScores()//called at the end of each minigame
+    public static void UpdateScores(int[] list)//called at the end of each minigame
     {
-        foreach(Controls p in players)
+        int o = 0;
+        foreach (int i in list)
         {
-            scores[p.playerNum]+=p.hitScript.score;
+            scores[o] += i;
+            o++;
         }
     }
 }

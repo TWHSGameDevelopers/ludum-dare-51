@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: ec4aee2cabe734ffdbd8100b55672046
+  - enabled: 1
+    path: Assets/Scenes/Bouncers.unity
+    guid: 062ee665543fb4387be797bd15e21ecd
+  - enabled: 1
+    path: Assets/Scenes/Dodge.unity
+    guid: 64829a4eff3c94a6585e81825367a70e
+  - enabled: 1
+    path: Assets/Scenes/AvoidLava.unity
+    guid: d53c3048b0156434ea6922208ec5b1d7
+  - enabled: 1
+    path: Assets/Scenes/MoneyGrabbers.unity
+    guid: 918edd1b0b368457796bf67217987bbb
+  - enabled: 1
+    path: Assets/Scenes/end.unity
+    guid: 7f33d834c712d4a88b983e83d3905e73
   m_configObjects: {}
