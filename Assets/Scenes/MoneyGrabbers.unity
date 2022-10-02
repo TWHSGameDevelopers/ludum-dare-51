@@ -779,7 +779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cafc44f10466b4105893ce58e4fd901d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: 5
+  next: 6
+  update: 1
 --- !u!114 &1626667594 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7933210972270576751, guid: 3a83875e5e1ec481d8f569d0b87cac58, type: 3}

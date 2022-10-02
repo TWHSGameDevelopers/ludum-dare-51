@@ -550,7 +550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next: 0
-  sc: {fileID: 0}
   update: 0
 --- !u!1 &1096818708
 GameObject:
@@ -1006,7 +1005,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Samuel Berman
 
-    Fawwaz Memmon'
+
+    Fawwaz'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1184,4 +1184,3 @@ MonoBehaviour:
   - {fileID: 614520720}
   - {fileID: 1096818710}
   - {fileID: 305761755}
-  st: {fileID: 0}
